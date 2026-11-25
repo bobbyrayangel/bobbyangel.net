@@ -102,8 +102,8 @@ footer{border-top:1px solid var(--rule);color:var(--mute);font-size:14px}
     <div>
       <h1>Bobby Angel</h1>
       <p class="sub">I build systems where software meets money, and now I'm building AI tools that automate that work.</p>
-      <p>My career has been centered around finance, technology and operations. At Harland Financial Solutions I supported banking software for savings and loans and worked with FDIC auditors on compliance and disaster recovery testing. At Mental Health America I helped build a federally audited representative-payee program from the ground up.</p>
-      <p>Today I'm building Python and Claude tools that automate the work I used to do by hand: reconciliations, invoice matching and data analysis. I'm looking for a Forward Deployed Engineer role where I can sit with a client, learn the real workflow and ship the fix.</p>
+      <p>My career has been centered around finance, technology and operations. At Harland Financial Solutions I supported and developed banking software for savings and loans and worked with FDIC auditors on compliance and disaster recovery testing. At Mental Health America I helped build a federally audited representative-payee program from the ground up.</p>
+      <p>Today I'm building Python and Claude tools that automate the work I used to do by hand: reconciliations, invoice matching and data analysis. I’m looking for my next role as a Forward Deployed Engineer, AI Implementation Specialist, Solutions Consultant, Fintech Product Analyst, or Financial Services Business Analyst—anywhere I can learn how a business really runs and build the tools that make it run better.</p>
       <p class="loc">Based in Covington, Kentucky (Cincinnati area)</p>
       <div class="btns">
         <a class="btn pri" href="#experience">View my experience</a>
@@ -138,7 +138,6 @@ footer{border-top:1px solid var(--rule);color:var(--mute);font-size:14px}
     <h2 class="ptitle">Active Products</h2>
     <p class="lead">Working tools I've built. Each one solves a real problem I ran into, and each one links to a live demo.</p>
     <div class="cards" id="cards"></div>
-    <p class="note">These cards are placeholders. Product details, screenshots and demo links still need to be added.</p>
   </div></div>
 </section>
 
@@ -146,7 +145,7 @@ footer{border-top:1px solid var(--rule);color:var(--mute);font-size:14px}
   <div class="band"><div class="wrap contact">
     <div>
       <h2 class="ptitle">Let's talk</h2>
-      <p class="lead" style="margin-bottom:0">I'm looking for Forward Deployed Engineer and AI implementation roles, especially in financial services. The fastest way to reach me is email.</p>
+      <p class="lead" style="margin-bottom:0">I'm open to Forward Deployed Engineer, AI solutions and finance roles. The fastest way to reach me is email.</p>
     </div>
     <div class="reach">
       <div><span>Email</span><a href="mailto:Bobbyrayangel@gmail.com">Bobbyrayangel@gmail.com</a></div>
@@ -176,28 +175,30 @@ const jobs=[
   "Lead community outreach to build relationships and bring on new partner organizations"]},
  {org:"RDI Corp",role:"Personal Banking Supervisor",when:"2018 – 2020",b:[
   "Advised branch managers on Regulation E compliance issues and helped them work through cases"]},
- {org:"Harland Financial Solutions",role:"Technical Support Developer / Application Specialist",when:"1997 – 2012",b:[
+ {org:"Harland Financial Solutions",role:"Application Specialist II",when:"1997 – 2012",b:[
+  "Developed .NET Framework tools that automated software installations, monitored application uptime and handled many other operational tasks",
+  "Built a cross-platform, SNMP-based automation platform that monitored and maintained mission-critical applications",
+  "Built an automated testing platform that pulled account data from SQL, submitted it through form posts and verified account balances to confirm internet banking interoperability",
+  "Wrote extensive code to parse financial data and automate manual operational tasks",
   "Provided level 2 and level 3 application support and program management for banking software that processed data for savings and loans",
   "Worked with FDIC auditors on compliance and ran disaster recovery testing for the FDIC",
   "Ran banks' MICR and ACH files through validation filters to confirm totals balanced; supported FedLine ACH",
-  "Supported portfolio management and accounting systems",
-  "Wrote extensive code to parse financial data and automate manual operational tasks",
-  "Built a cross-platform, SNMP-based automation platform that monitored and maintained mission-critical applications",
-  "Built an automated testing platform that pulled account data from SQL, submitted it through form posts and verified account balances to confirm internet banking interoperability"]}];
+  "Supported portfolio management and accounting systems"]}];
 const skills=[
  ["Financial operations","ACH and FedLine, MICR file validation, reconciliations, billing, audits, SSA benefits (SSI/SSDI), ABLE/STABLE accounts"],
+ ["Markets","Quantitative analysis of financial markets, trade performance metrics (profit factor, MAE/MFE), Monte Carlo risk modeling"],
  ["Compliance","Regulation E, FDIC audit support, disaster recovery testing, federal record-keeping audits, SOP writing"],
- ["Technical","Python, Claude API and AI workflow automation, APIs, data parsing, L2/L3 application support"],
+ ["Technical","Python, .NET Framework, Claude API and AI workflow automation, APIs, data parsing, L2/L3 application support"],
  ["Leadership","Building programs from scratch, supervising peer staff, working with case managers and auditors"]];
 const cards=[
- {n:"Probabilistic dashboard",s:"In development"},
+ {n:"Probabilistic Price Outcomes",s:"Live",b:"Claude data dashboard",l:"https://claude.ai/artifact/SFSS2ncwGiULixXKE5waWy",note:"Requires a Claude account to view"},
  {n:"Trade Analyzer",s:"Live",b:"JavaScript, runs entirely in your browser",l:"https://claude.ai/artifact/HmhuAYjoFTyELctkhGkM9e",p:"Upload your trade logs and see your real edge and risk. No trade logs are saved.",d:["Profit factor","Average win and average loss","Average number of contracts","Max favorable excursion: how much you could have made (add price data)","Max adverse excursion: the average maximum risk you took per trade (add price data)","Risk of ruin from a Monte Carlo replay of your own trades"]},
  {n:"Three-Way Match Portal",s:"Prototype",b:"Base44",l:"https://sophisticated-nutri-match-flow.base44.app",p:"Procurement reconciliation for a nutrition manufacturer.",d:["Matches purchase orders, goods receipts and supplier invoices line by line","Holds mismatched items as exceptions until they're cleared","Tracks certificates of analysis (COAs)","Reports on open exposure"]},
  {n:"Certified 2nd Appliances",s:"Prototype",b:"Base44",l:"https://certified-appliance-link.base44.app",p:"Website and AI front desk for a refurbished-appliance business.",d:["Shop of certified refurbished washers, dryers, refrigerators and ranges with condition grades","Repair booking and pickup and delivery scheduling","AI auto receptionist that takes messages and books appointments 24/7","AI appliance concierge that matches shoppers to in-stock units and reserves delivery windows","Owner dashboard for running the business"]},
  {n:"Crewline",s:"Prototype",b:"Base44",l:"https://trade-flow-efficient-pro.base44.app",p:"A white-label CRM for trades businesses: demo it first, then make it theirs.",d:["Each business gets its own branded workspace with its name, trade and pricing","Walk an owner through a working demo; the same workspace goes live when they sign","Missed calls with one-tap text back, so no lead goes cold","Job board, estimates out, follow-ups and customer reviews in one place","Operator console tracks every workspace from demo to trial to paying, with monthly recurring revenue"]}];
 document.getElementById('jobs').innerHTML=jobs.map(j=>`<article class="job${j.now?' now':''}"><div><h3>${j.org}</h3>${j.role?`<p class="role">${j.role}</p>`:''}${j.when?`<p class="when">${j.when}</p>`:''}</div><ul>${j.b.map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join('');
 document.getElementById('skills').innerHTML=skills.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
-document.getElementById('cards').innerHTML=cards.map(c=>`<article class="card"><div class="shot">Screenshot</div><span class="tag">${c.s}</span><h3>${c.n}</h3>${c.p?`<p style="margin:0">${c.p}</p><ul style="margin:0;padding-left:20px;font-size:15px">${c.d.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<dl>${c.p?'':'<dt>Problem</dt><dd>To be added</dd>'}<dt>Built with</dt><dd>${c.b||'Python'}</dd><dt>Demo</dt><dd>${c.l?`<a href="${c.l}" target="_blank" rel="noopener">${c.s==='Prototype'?'Open the prototype':'Try it live'}</a>`:'Link to be added'}</dd></dl></article>`).join('');
+document.getElementById('cards').innerHTML=cards.map(c=>`<article class="card"><span class="tag">${c.s}</span><h3>${c.n}</h3>${c.p?`<p style="margin:0">${c.p}</p><ul style="margin:0;padding-left:20px;font-size:15px">${c.d.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<dl>${c.p?'':'<dt>Problem</dt><dd>To be added</dd>'}<dt>Built with</dt><dd>${c.b||'Python'}</dd><dt>Demo</dt><dd>${c.l?`<a href="${c.l}" target="_blank" rel="noopener">${c.s==='Prototype'?'Open the prototype':'Try it live'}</a>`:'Link to be added'}</dd></dl>${c.note?`<p class="note" style="margin:0">${c.note}</p>`:''}</article>`).join('');
 const views=['home','experience','products','contact'];
 const show=()=>{const h=location.hash.slice(1);const v=views.includes(h)?h:'home';
  for(const k of views)document.getElementById('v-'+k).classList.toggle('on',k===v);
