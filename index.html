@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bobby Angel</title>
+<meta name="description" content="Bobby Angel: banking-tech veteran building AI tools for financial operations. Experience, products and contact.">
+<link rel="icon" href="headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE: calm, credible, plain-spoken; a banking-tech veteran's portfolio for hiring managers
+   IDEA: a well-set statement of record, like a bank's annual report: ledger rules, figures, tidy columns
+   PICTURE: Bobby's headshot, large, framed on a deep teal field in the first screen
+   COLOUR and TYPE: white, ink #14161a, deep teal #0b5d63, rule grey; Libre Caslon for titles, Inter for text
+   LAYOUT: sticky top nav to four views; hero splits name/intro and photo; ruled entries below */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0d1416);--ink:light-dark(#14161a,#e8ecec);--mute:light-dark(#5a6168,#9aa6a8);
+--teal:light-dark(#0b5d63,#3fa7ae);--field:light-dark(#0b5d63,#0f3a3e);--onfield:#f2f7f7;
+--rule:light-dark(#dfe3e5,#24302f);--soft:light-dark(#f3f6f6,#131d1f)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{font-family:"Libre Caslon Text",Georgia,serif;font-weight:400;line-height:1.1;text-wrap:balance;margin:0}
+a{color:var(--teal)}
+.wrap{max-width:1160px;margin:0 auto}
+.band{padding:clamp(28px,5vw,72px) max(5vw,16px)}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 20px;padding:12px max(5vw,16px)}
+.brand{font-family:"Libre Caslon Text",serif;font-size:21px;color:var(--ink);text-decoration:none}
+.links{display:flex;flex-wrap:wrap;gap:4px}
+.links a{color:var(--ink);text-decoration:none;padding:10px 12px;border-radius:6px;font-weight:500;font-size:15px;min-height:44px;display:inline-flex;align-items:center}
+.links a[aria-current=page]{background:var(--soft);color:var(--teal)}
+.links a:focus-visible,.btn:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.view{display:none}.view.on{display:block;animation:in .35s ease}
+@keyframes in{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.view.on{animation:none}}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center}
+.hero h1{font-size:clamp(40px,6vw,64px)}
+.sub{font-size:clamp(19px,2vw,22px);color:var(--teal);margin:18px 0 22px;font-family:"Libre Caslon Text",serif;font-style:italic;line-height:1.35}
+.hero p{max-width:62ch;margin:0 0 14px}
+.loc{color:var(--mute);font-size:15px}
+.frame{background:var(--field);padding:clamp(14px,2vw,22px);border-radius:4px;position:relative}
+.frame img{display:block;width:100%;aspect-ratio:1;object-fit:cover;border-radius:2px}
+.frame figcaption{color:var(--onfield);font-size:14px;padding-top:12px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:6px;font-weight:600;text-decoration:none;border:1px solid var(--teal);color:var(--teal)}
+.btn.pri{background:var(--teal);color:#fff}
+:root:not([data-theme=light]) .btn.pri{color:light-dark(#fff,#0d1416)}
+/* figures strip */
+.figs{background:var(--soft);border-block:1px solid var(--rule)}
+.figs .wrap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.fig b{display:block;font-family:"Libre Caslon Text",serif;font-size:clamp(30px,4vw,44px);font-weight:400;color:var(--teal);line-height:1.1}
+.fig span{color:var(--mute);font-size:15px}
+/* experience */
+.ptitle{font-size:clamp(34px,4.5vw,48px);margin-bottom:8px}
+.lead{color:var(--mute);max-width:62ch;margin:0 0 32px}
+.job{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:8px 40px;border-top:1px solid var(--rule);padding:28px 0}
+.job h3{font-size:24px}
+.role{font-weight:600;margin:6px 0 2px}
+.when{color:var(--mute);font-size:15px;white-space:nowrap}
+.job ul{margin:0;padding-left:20px}.job li{margin:0 0 8px;max-width:70ch}
+.job.now h3{color:var(--teal)}
+table{width:100%;border-collapse:collapse;margin-top:8px}
+th,td{text-align:left;vertical-align:top;padding:14px 12px 14px 0;border-top:1px solid var(--rule)}
+th{font-size:15px;color:var(--mute);font-weight:500}
+td:first-child{font-weight:600;width:28%}
+/* products */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px}
+.card{border:1px solid var(--rule);border-radius:6px;padding:22px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.card h3{font-size:24px}
+.shot{aspect-ratio:16/9;border-radius:4px;background:var(--soft);display:grid;place-items:center;color:var(--mute);font-size:14px;border:1px dashed var(--rule)}
+.tag{align-self:flex-start;font-size:13px;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--teal)}
+dl{margin:0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:6px 14px;font-size:15px}
+dt{color:var(--mute)}dd{margin:0}
+.note{font-size:14px;color:var(--mute);margin-top:18px}
+/* contact */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:start}
+.reach{border-top:1px solid var(--rule)}
+.reach div{border-bottom:1px solid var(--rule);padding:18px 0}
+.reach span{display:block;color:var(--mute);font-size:14px}
+.reach a{font-size:clamp(17px,2vw,20px);overflow-wrap:anywhere}
+footer{border-top:1px solid var(--rule);color:var(--mute);font-size:14px}
+.preview{background:var(--field);color:var(--onfield);font-size:13px;text-align:center;padding:6px 12px}
+@media(max-width:760px){.hero,.contact{grid-template-columns:minmax(0,1fr)}.frame{order:-1;max-width:420px}
+.job{grid-template-columns:minmax(0,1fr)}.figs .wrap{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){table{font-size:14px}td:first-child{width:auto}tr{display:grid}td,th{padding:6px 0;border:0}tr{border-top:1px solid var(--rule);padding:10px 0}thead{display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#home">Bobby Angel</a>
+  <div class="links">
+    <a href="#home">Home</a><a href="#experience">Experience</a><a href="#products">Products</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<main>
+<section class="view" id="v-home">
+  <div class="band"><div class="wrap hero">
+    <div>
+      <h1>Bobby Angel</h1>
+      <p class="sub">I build systems where software meets money, and now I'm building AI tools that automate that work.</p>
+      <p>My career has been at the point where financial operations meet technology. At Harland Financial Solutions I supported banking software for savings and loans and worked with FDIC auditors on compliance and disaster recovery testing. At Mental Health America I helped build a federally audited representative-payee program from the ground up.</p>
+      <p>Today I'm building Python and Claude tools that automate the work I used to do by hand: reconciliations, invoice matching and data analysis. I'm looking for a Forward Deployed Engineer role where I can sit with a client, learn the real workflow and ship the fix.</p>
+      <p class="loc">Based in Covington, Kentucky (Cincinnati area)</p>
+      <div class="btns">
+        <a class="btn pri" href="#experience">View my experience</a>
+        <a class="btn" href="#products">See my products</a>
+        <a class="btn" href="#contact">Contact me</a>
+      </div>
+    </div>
+    <figure class="frame" style="margin:0">
+      <img src="headshot.jpg" alt="Portrait of Bobby Angel, smiling, in a grey t-shirt">
+      <figcaption><span>Bobby Angel</span><span>Covington, KY</span></figcaption>
+    </figure>
+  </div></div>
+  <div class="band figs"><div class="wrap">
+    <div class="fig"><b>15 years</b><span>Banking software at Harland Financial Solutions, 1997–2012</span></div>
+    <div class="fig"><b>12 → 26</b><span>Payee clients after I helped build MHA's program</span></div>
+    <div class="fig"><b>FDIC</b><span>Compliance and disaster recovery testing with federal auditors</span></div>
+  </div></div>
+</section>
+
+<section class="view" id="v-experience">
+  <div class="band"><div class="wrap">
+    <h2 class="ptitle">Experience</h2>
+    <p class="lead">Fifteen years building and supporting banking systems, then years serving at-risk community members. Now bringing both to AI.</p>
+    <div id="jobs"></div>
+    <h2 class="ptitle" style="font-size:clamp(28px,3.5vw,36px);margin-top:40px">Skills</h2>
+    <table><thead><tr><th>Area</th><th>Skills</th></tr></thead><tbody id="skills"></tbody></table>
+  </div></div>
+</section>
+
+<section class="view" id="v-products">
+  <div class="band"><div class="wrap">
+    <h2 class="ptitle">Active Products</h2>
+    <p class="lead">Working tools I've built. Each one solves a real problem I ran into, and each one links to a live demo.</p>
+    <div class="cards" id="cards"></div>
+    <p class="note">These cards are placeholders. Product details, screenshots and demo links still need to be added.</p>
+  </div></div>
+</section>
+
+<section class="view" id="v-contact">
+  <div class="band"><div class="wrap contact">
+    <div>
+      <h2 class="ptitle">Let's talk</h2>
+      <p class="lead" style="margin-bottom:0">I'm looking for Forward Deployed Engineer and AI implementation roles, especially in financial services. The fastest way to reach me is email.</p>
+    </div>
+    <div class="reach">
+      <div><span>Email</span><a href="mailto:Bobbyrayangel@gmail.com">Bobbyrayangel@gmail.com</a></div>
+      <div><span>LinkedIn</span><a href="https://www.linkedin.com/in/bobbyrayangel">linkedin.com/in/bobbyrayangel</a></div>
+    </div>
+  </div></div>
+</section>
+</main>
+
+<footer class="band" style="padding-block:24px"><div class="wrap">© 2026 Bobby Angel · bobbyangel.net</div></footer>
+
+<script>
+{
+const jobs=[
+ {org:"Now: Building AI workflow tools",now:true,role:"",when:"",b:[
+  "Building Python tools that use Claude to automate financial back-office work, starting with invoice matching and trade analysis",
+  "Working through Anthropic Academy coursework toward the Claude Certified Architect – Foundations certification (in progress)"]},
+ {org:"Mental Health America of NKY & SW Ohio",role:"Peer Team Lead / Payee Coordinator",when:"2023 – present",b:[
+  "Helped create the organization's representative-payee program, more than doubled its caseload (12 to 26 clients) and redesigned key processes",
+  "Serve at-risk community members, helping them stay stable and thrive across all eight dimensions of wellness, well beyond managing their benefits and bills",
+  "Manage client funds across SSI/SSDI, TrueLink, ABLE/STABLE accounts, HUD-VASH and ACH transfers",
+  "Handle reconciliations, billing, audits, reporting and grant and state-funding requirements",
+  "Program is audited by federal reviewers for compliance and record keeping; wrote the record-keeping SOPs",
+  "Budget and track client spending and coordinate with case managers on housing and financial goals",
+  "Supervise peer support specialists and run day-to-day operations at The Pier Recovery Community Center (Newport, KY), an MHA program",
+  "Facilitate groups and classes",
+  "Lead community outreach to build relationships and bring on new partner organizations"]},
+ {org:"RDI Corp",role:"Personal Banking Supervisor",when:"2018 – 2020",b:[
+  "Advised branch managers on Regulation E compliance issues and helped them work through cases"]},
+ {org:"Harland Financial Solutions",role:"Technical Support Developer / Application Specialist",when:"1997 – 2012",b:[
+  "Provided level 2 and level 3 application support and program management for banking software that processed data for savings and loans",
+  "Worked with FDIC auditors on compliance and ran disaster recovery testing for the FDIC",
+  "Ran banks' MICR and ACH files through validation filters to confirm totals balanced; supported FedLine ACH",
+  "Supported portfolio management and accounting systems",
+  "Wrote extensive code to parse financial data and automate manual operational tasks",
+  "Built a cross-platform, SNMP-based automation platform that monitored and maintained mission-critical applications",
+  "Built an automated testing platform that pulled account data from SQL, submitted it through form posts and verified account balances to confirm internet banking interoperability"]}];
+const skills=[
+ ["Financial operations","ACH and FedLine, MICR file validation, reconciliations, billing, audits, SSA benefits (SSI/SSDI), ABLE/STABLE accounts"],
+ ["Compliance","Regulation E, FDIC audit support, disaster recovery testing, federal record-keeping audits, SOP writing"],
+ ["Technical","Python, Claude API and AI workflow automation, APIs, data parsing, L2/L3 application support"],
+ ["Leadership","Building programs from scratch, supervising peer staff, working with case managers and auditors"]];
+const cards=[
+ {n:"Probabilistic dashboard",s:"In development"},
+ {n:"Trade Analyzer",s:"Live",b:"JavaScript, runs entirely in your browser",l:"https://claude.ai/artifact/HmhuAYjoFTyELctkhGkM9e",p:"Upload your trade logs and see your real edge and risk. No trade logs are saved.",d:["Profit factor","Average win and average loss","Average number of contracts","Max favorable excursion: how much you could have made (add price data)","Max adverse excursion: the average maximum risk you took per trade (add price data)","Risk of ruin from a Monte Carlo replay of your own trades"]},
+ {n:"Three-Way Match Portal",s:"Prototype",b:"Base44",l:"https://sophisticated-nutri-match-flow.base44.app",p:"Procurement reconciliation for a nutrition manufacturer.",d:["Matches purchase orders, goods receipts and supplier invoices line by line","Holds mismatched items as exceptions until they're cleared","Tracks certificates of analysis (COAs)","Reports on open exposure"]},
+ {n:"Certified 2nd Appliances",s:"Prototype",b:"Base44",l:"https://certified-appliance-link.base44.app",p:"Website and AI front desk for a refurbished-appliance business.",d:["Shop of certified refurbished washers, dryers, refrigerators and ranges with condition grades","Repair booking and pickup and delivery scheduling","AI auto receptionist that takes messages and books appointments 24/7","AI appliance concierge that matches shoppers to in-stock units and reserves delivery windows","Owner dashboard for running the business"]},
+ {n:"Crewline",s:"Prototype",b:"Base44",l:"https://trade-flow-efficient-pro.base44.app",p:"A white-label CRM for trades businesses: demo it first, then make it theirs.",d:["Each business gets its own branded workspace with its name, trade and pricing","Walk an owner through a working demo; the same workspace goes live when they sign","Missed calls with one-tap text back, so no lead goes cold","Job board, estimates out, follow-ups and customer reviews in one place","Operator console tracks every workspace from demo to trial to paying, with monthly recurring revenue"]}];
+document.getElementById('jobs').innerHTML=jobs.map(j=>`<article class="job${j.now?' now':''}"><div><h3>${j.org}</h3>${j.role?`<p class="role">${j.role}</p>`:''}${j.when?`<p class="when">${j.when}</p>`:''}</div><ul>${j.b.map(x=>`<li>${x}</li>`).join('')}</ul></article>`).join('');
+document.getElementById('skills').innerHTML=skills.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td></tr>`).join('');
+document.getElementById('cards').innerHTML=cards.map(c=>`<article class="card"><div class="shot">Screenshot</div><span class="tag">${c.s}</span><h3>${c.n}</h3>${c.p?`<p style="margin:0">${c.p}</p><ul style="margin:0;padding-left:20px;font-size:15px">${c.d.map(x=>`<li>${x}</li>`).join('')}</ul>`:''}<dl>${c.p?'':'<dt>Problem</dt><dd>To be added</dd>'}<dt>Built with</dt><dd>${c.b||'Python'}</dd><dt>Demo</dt><dd>${c.l?`<a href="${c.l}" target="_blank" rel="noopener">${c.s==='Prototype'?'Open the prototype':'Try it live'}</a>`:'Link to be added'}</dd></dl></article>`).join('');
+const views=['home','experience','products','contact'];
+const show=()=>{const h=location.hash.slice(1);const v=views.includes(h)?h:'home';
+ for(const k of views)document.getElementById('v-'+k).classList.toggle('on',k===v);
+ for(const a of document.querySelectorAll('.links a'))a.toggleAttribute('aria-current',a.getAttribute('href')==='#'+v),a.getAttribute('href')==='#'+v&&a.setAttribute('aria-current','page');
+ window.scrollTo(0,0)};
+window.addEventListener('hashchange',show);show();
+}
+</script>
+</body>
+</html>
